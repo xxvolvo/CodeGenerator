@@ -1,0 +1,28 @@
+﻿@model TableConfig
+    <pre>
+using System;
+
+namespace @Model.NameSapce
+{
+	//@Model.FullName
+	public class @Model.FullName: BaseDto
+    {
+    @foreach (var item in Model.ColumnConfig)
+    {
+        if (item.PropName == "Id") { continue; }
+
+        <text>
+        /// <summary>
+		/// @Html.Raw(item.Remark)
+        /// </summary>
+        public virtual @item.CsType @item.PropName
+        {
+            get; 
+            set; 
+        }  
+        </text>
+    }
+
+    }
+}
+</pre>

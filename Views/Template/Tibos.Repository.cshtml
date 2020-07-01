@@ -1,0 +1,19 @@
+﻿@model TableConfig
+    <pre>
+using Microsoft.Extensions.Options;
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+
+namespace @Model.NameSapce
+{
+	public partial class @Model.FullName:FuluRepository<@(Model.TableName)>
+    {
+        public @(Model.FullName)(IOptions<Common.config.MySqlConnection> MySqlConnectionString):base(MySqlConnectionString)
+        {
+
+        }
+    }
+}
+</pre>

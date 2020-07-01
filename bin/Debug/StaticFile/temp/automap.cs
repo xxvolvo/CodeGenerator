@@ -1,0 +1,1 @@
+CreateMap<Device, DeviceDto>();

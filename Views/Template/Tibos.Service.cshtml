@@ -1,0 +1,18 @@
+﻿@model TableConfig
+<pre>
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace @Model.NameSapce
+{
+    public class @Model.FullName:BaseService<@Model.TableName>,I@(Model.FullName)
+    {
+        private readonly IBaseRepository<@Model.TableName> dao;
+        public @(Model.FullName)(IBaseRepository<@Model.TableName> dao):base(dao)
+        {
+            this.dao = dao;
+        }
+    }
+}
+</pre>
